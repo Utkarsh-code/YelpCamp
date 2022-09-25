@@ -1,0 +1,41 @@
+
+<% if(success && success.length) {%>
+    
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+       
+        <%= success %>
+       <!-- <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="">  </span>
+        </button>
+       
+        <span id='close' onclick='this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode); return false;' ml="100">
+         close</span>
+         <button class="" onclick="document.getElementById('myDiv').style.display='none'" align="center">Close</button>-->
+         
+           
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">
+                <button class="btn btn-danger" style="margin-right: 100px;">&times;</button>
+            </span>
+          
+            
+         
+    </div>
+  
+    <% } %>
+
+<% if(error && error.length) {%>
+    
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <%= error %>
+
+            <!--
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true"> &times; </span>
+            </button>
+            -->
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">
+                <button class="btn btn-danger" style="margin-right: 100px;">&times;</button>
+            </span>
+        </div>
+       
+<% } %>
